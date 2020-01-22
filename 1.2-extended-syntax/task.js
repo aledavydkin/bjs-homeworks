@@ -1,4 +1,4 @@
-
+'use strict'
 
 function calculateQuadraticEquation(){
     let a = +window.a.value;
@@ -11,8 +11,20 @@ function calculateQuadraticEquation(){
 }
 
 function getResult(a,b,c){
-    // код для задачи №1 писать здесь
-    //return x;
+    let discriminant = b**2-4*a*c;
+    let x = [];
+    if (discriminant < 0){
+        return x;
+    } else if (discriminant === 0) {
+        let count = -b/2*a;
+        x.push(count);
+        return x;
+    } else if (discriminant > 0) {
+        let count = (-b + Math.sqrt(discriminant)) /2*a;
+        let countTwo = (-b - Math.sqrt(discriminant)) /2*a;
+        x.push(count, countTwo);
+        return x;
+    }
 }
 
 function calculateAverageRating(){
@@ -22,8 +34,23 @@ function calculateAverageRating(){
 }
 
 function getAverageMark(marks){
-    // код для задачи №2 писать здесь
-    //return averageMark;
+    marks.push(averageMark);
+    marks.pop(averageMark);
+    let count = marks.length;
+    let summ = 0;
+    for (let i = 0; i < count; i++) {
+        summ += marks[i];
+    }
+    if (count > 5) {
+        marks.splice(5);
+        marks = summ / count;
+        console.log(`Оценок больше 5 - Считается по первым 5 оценкам. Итого среднее: ${marks}`);
+        return averageMark;
+    } else {
+        marks = summ / count;
+        console.log(marks);
+        return averageMark;
+    }
 }
 
 function calculateDrinkTask(){
@@ -34,7 +61,16 @@ function calculateDrinkTask(){
 }
 
 function askDrink(name,dateOfBirthday){
-    // код для задачи №3 писать здесь
-    //console.log(result)
-    //return result;
+    let thisYaer = new Date().getFullYear();
+    let UserYaerValue = dateOfBirthday.getFullYear();
+    dateOfBirthday = (thisYaer - UserYaerValue);
+
+    if(dateOfBirthday > 18){
+        let result = `Не желаете ли олд-фэшн, ${name}?`
+        console.log(dateOfBirthday)
+        return result;
+    } else {
+        let result = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`
+        return result;
+    }
 }
