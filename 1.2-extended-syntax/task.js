@@ -40,7 +40,7 @@ function getAverageMark(marks){
 
     if (marks.length > 4) {
         marks.splice(5);
-        console.log('Оценок больше 5' + marks);
+        console.log('Оценок больше 5');
     }
 
     for (let i = 0; i < marks.length; i++) {
