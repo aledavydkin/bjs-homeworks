@@ -68,11 +68,20 @@ getAverageScore ({
 // Задача номер 3;
 function getPersonData( secretData ) {
     let firstName, lastName;
-    secretData.aaa === 0 ? firstName = "Родриго" : firstName = "Эмилио";
-    secretData.bbb === 0 ? lastName = "Родриго" : lastName = "Эмилио";
-
+    firstName = help(secretData.aaa);
+    lastName = help(secretData.bbb);
     return {firstName: firstName, lastName: lastName};
 }
+
+function help(number) {
+     if (number === 0) {
+         return number = 'Родриго';
+     } else {
+         return number = 'Эмильо';
+     }
+ }
+
+
 
 getPersonData({aaa: 1, bbb: 0});
 
