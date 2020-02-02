@@ -7,8 +7,8 @@ function getSolutions( a, b, c ) {
         let x1 = -b / (2 * a);
         return {roots: [x1], D: D}
     } else if (D > 0) {
-        let x1 = (-b + Math.sqrt(D)) / 2 * a;
-        let x2 = (-b - Math.sqrt(D)) / 2 * a;
+        let x1 = (-b + Math.sqrt(D)) / (2 * a);
+        let x2 = (-b - Math.sqrt(D)) / (2 * a);
         return {roots: [x1, x2], D: D}
     }
 }
