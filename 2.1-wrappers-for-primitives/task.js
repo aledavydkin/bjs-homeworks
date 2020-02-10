@@ -19,23 +19,24 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     }
 
     for (let prop in obj) {
-        if (Number.isNaN(parseInt(obj[prop]))){
+        if (Number.isNaN(parseInt(obj[prop]))) {
             console.log(`Параметр ${prop} содержит неправильное значение ${obj[prop]}`);
             return null;
-        } else {
-            let today = new Date();
-            let dateEnd = new Date(date);
-
-            let p = percent / 100 / 12;
-            let s = amount - contribution;
-            let n = parseInt((dateEnd - today) / (1000 * 3600 * 24 * 30));
-            let summ = (s * (p + p / (((1 + p) ** n) - 1))).toFixed(2);
-
-            totalAmount = (summ * n).toFixed(2);
-            console.log(totalAmount);
-            return totalAmount;
         }
-    }   
+    }
+
+    let today = new Date();
+    let dateEnd = new Date(date);
+
+    let p = percent / 100 / 12;
+    let s = amount - contribution;
+    let n = parseInt((dateEnd - today) / (1000 * 3600 * 24 * 30));
+    let summ = (s * (p + p / (((1 + p) ** n) - 1))).toFixed(2);
+
+    totalAmount = (summ * n).toFixed(2);
+    console.log(totalAmount);
+    return totalAmount;
+
 }
 
 function sayHello() {
@@ -46,12 +47,13 @@ function sayHello() {
 }
 
 function getGreeting(name) {
-    if(!isNaN(name)) {
+    if (!isNaN(name)) {
         name = 'Анноним';
     }
 
-    let greeting = alert(`Привет, мир! Меня зовут ${name}.`);
-    
+    alert(`Привет, мир! Меня зовут ${name}.`);
+    let greeting = `Привет, мир! Меня зовут ${name}.`;
+
     console.log(`Привет, мир! Меня зовут ${name}.`);
     return greeting;
 }
