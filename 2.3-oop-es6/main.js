@@ -16,7 +16,7 @@ class Weapon {
     }
 
     getDamage() {
-        if (this.durability >= (100 * this.startDurability) / this.durability) {
+        if (this.durability >= (100 * 30) / this.startDurability) {
             return this.attack;
         } else if (this.durability = 0) {
             return 0;
@@ -60,8 +60,8 @@ const bow = new Weapon({
     range: 3,
 });
 
-bow.takeDamage(20);
-console.log(bow.durability); // 180
+bow.takeDamage(135);
+console.log(bow.durability); // 65
 
 bow.takeDamage(200);
 console.log(bow.durability); // 0
@@ -213,7 +213,7 @@ class StudentLog {
         for (const subject in this.subjects) {
             summ += this.getAverageBySubject(subject);
         }
-        return summ / Object.keys(this.subjects).length;
+        return parseInt(summ) / Object.keys(this.subjects).length;
     }
 }
 
