@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 // Задача номер 1;
 function getSolutions( a, b, c ) {
     let D = b ** 2 - 4 * a * c;
@@ -85,3 +86,6 @@ function help(number) {
 
 getPersonData({aaa: 1, bbb: 0});
 
+=======
+// тут пусто, так как нету UI
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445

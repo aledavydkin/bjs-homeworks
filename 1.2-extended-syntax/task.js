@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use strict'
 
 function calculateQuadraticEquation(){
@@ -70,4 +71,19 @@ function askDrink(name,dateOfBirthday){
         let result = `Сожалею, ${name}, но я не могу вам продать алкоголь. Зато могу предложить вам замечательный клюквенный компот!`
         return result;
     }
+=======
+function getResult(a,b,c){
+    // код для задачи №1 писать здесь
+    // return x;
+}
+
+function getAverageMark(marks){
+    // код для задачи №2 писать здесь
+    // return averageMark;
+}
+
+function askDrink(name,dateOfBirthday){
+    // код для задачи №3 писать здесь
+    // return result;
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445
 }

@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 function initCheckBirthday() {
     const birthday = document.getElementById('birthday').value;
 
@@ -14,6 +15,8 @@ function checkBirthday(birthday) {
     return age;
 }
 
+=======
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445
 function initPrintAnimalSound() {
     const animal = {
         sound: 'grrrr',
@@ -24,6 +27,7 @@ function initPrintAnimalSound() {
     document.getElementById('sound').innerHTML = result;   
 }
 
+<<<<<<< HEAD
 function getAnimalSound(animal) {
     if (animal === undefined){
         return null;
@@ -33,6 +37,8 @@ function getAnimalSound(animal) {
     return sound;
 }
 
+=======
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445
 function initCalculateStatement() {
     for (let idx = 0; idx < 3; idx++) {
         const marks = document.getElementById('learner-' + idx).value.split(',');
@@ -43,6 +49,7 @@ function initCalculateStatement() {
     }
 }
 
+<<<<<<< HEAD
 function getAverageMark(marks) {
     let summ = 0;
     for (let i = 0; i < marks.length; i++) {
@@ -52,4 +59,12 @@ function getAverageMark(marks) {
     let roundedAverage = Math.round(summ);
     
     return roundedAverage;
+=======
+function initCheckBirthday() {
+    const birthday = document.getElementById('birthday').value;
+
+    const result = checkBirthday(birthday) ? "Да" : "Нет";
+
+    document.getElementById('disclaimer').innerHTML = result;   
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445
 }

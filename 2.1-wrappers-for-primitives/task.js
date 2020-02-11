@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use script'
 function calculateMortgage() {
     let percent = window.percent.value;
@@ -56,4 +57,14 @@ function getGreeting(name) {
 
     console.log(`Привет, мир! Меня зовут ${name}.`);
     return greeting;
+=======
+function calculateTotalMortgage(percent, contribution, amount, date) {
+    // код для задачи №1 писать здесь
+    // return totalAmount;
+}
+
+function getGreeting(name) {
+    // код для задачи №2 писать здесь
+    // return greeting;
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445
 }
