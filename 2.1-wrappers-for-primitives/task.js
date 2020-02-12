@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 'use script'
 function calculateMortgage() {
     let percent = window.percent.value;
@@ -19,23 +20,24 @@ function calculateTotalMortgage(percent, contribution, amount, date) {
     }
 
     for (let prop in obj) {
-        if (Number.isNaN(parseInt(obj[prop]))){
+        if (Number.isNaN(parseInt(obj[prop]))) {
             console.log(`Параметр ${prop} содержит неправильное значение ${obj[prop]}`);
             return null;
-        } else {
-            let today = new Date();
-            let dateEnd = new Date(date);
-
-            let p = percent / 100 / 12;
-            let s = amount - contribution;
-            let n = parseInt((dateEnd - today) / (1000 * 3600 * 24 * 30));
-            let summ = (s * (p + p / (((1 + p) ** n) - 1))).toFixed(2);
-
-            totalAmount = (summ * n).toFixed(2);
-            console.log(totalAmount);
-            return totalAmount;
         }
-    }   
+    }
+
+    let today = new Date();
+    let dateEnd = new Date(date);
+
+    let p = percent / 100 / 12;
+    let s = amount - contribution;
+    let n = parseInt((dateEnd - today) / (1000 * 3600 * 24 * 30));
+    let summ = (s * (p + p / (((1 + p) ** n) - 1))).toFixed(2);
+
+    totalAmount = (summ * n).toFixed(2);
+    console.log(totalAmount);
+    return totalAmount;
+
 }
 
 function sayHello() {
@@ -46,12 +48,23 @@ function sayHello() {
 }
 
 function getGreeting(name) {
-    if(!isNaN(name)) {
+    if (!isNaN(name)) {
         name = 'Анноним';
     }
 
-    let greeting = alert(`Привет, мир! Меня зовут ${name}.`);
-    
+    alert(`Привет, мир! Меня зовут ${name}.`);
+    let greeting = `Привет, мир! Меня зовут ${name}.`;
+
     console.log(`Привет, мир! Меня зовут ${name}.`);
     return greeting;
+=======
+function calculateTotalMortgage(percent, contribution, amount, date) {
+    // код для задачи №1 писать здесь
+    // return totalAmount;
+}
+
+function getGreeting(name) {
+    // код для задачи №2 писать здесь
+    // return greeting;
+>>>>>>> 4c30284dce3692f96e907534bc726f930eb75445
 }
