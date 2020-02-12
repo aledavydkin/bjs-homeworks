@@ -211,7 +211,7 @@ class StudentLog {
         }
         let summ = 0;
         for (const subject in this.subjects) {
-            summ += this.getAverageBySubject(subject);
+            summ += parseInt(this.getAverageBySubject(subject));
         }
         return summ / Object.keys(this.subjects).length;
     }
